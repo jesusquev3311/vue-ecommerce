@@ -1,5 +1,5 @@
 import Axios from 'axios';
-import router from '../../src/router';
+import router from '../../router';
 
 const login = ({ commit }) => {
     const url = 'https://randomuser.me/api/';
