@@ -23,3 +23,13 @@ export const addCart = ({ commit, getters }, payload) => {
     cart.push(payload);
     commit('setCart', cart);
 };
+
+export const removeCart = ({ commit, getters }, id) => {
+    const { cart } = getters;
+
+    if (id) {
+        cart.splice(id, 1);
+    }
+
+    commit('setCart', cart);
+};
