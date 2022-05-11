@@ -1,17 +1,20 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
+import Vue from "vue";
+import Vuex from "vuex";
+import createPersistedState from "vuex-persistedstate";
+
+import account from "./account";
+import product from "./product";
 
 Vue.use(Vuex);
 
-export default new Vuex.Store({
-  state: {
-  },
-  getters: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-  },
-});
+export default () => {
+    const Store = new Vuex.Store({
+        modules: {
+            account,
+            product,
+        },
+        strict: process.env.DEV,
+        plugins: [createPersistedState()],
+    });
+    return Store;
+};
