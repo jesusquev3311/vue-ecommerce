@@ -1,7 +1,7 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
-import account from './account';
-import product from './product';
+import Vue from "vue";
+import Vuex from "vuex";
+import account from "./account";
+import product from "./product";
 
 Vue.use(Vuex);
 

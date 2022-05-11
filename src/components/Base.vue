@@ -1,8 +1,17 @@
 <template>
     <div>
-        <nav class="navbar is-link" role="navigation" aria-label="main navigation">
+        <nav
+            class="navbar is-link"
+            role="navigation"
+            aria-label="main navigation"
+        >
             <div class="navbar-brand">
-                <router-link class="navbar-item" to="/">CS-eCommerce</router-link>
+                <router-link
+                    class="navbar-item"
+                    to="/"
+                >
+                    CS-eCommerce
+                </router-link>
                 <a
                     role="button"
                     class="navbar-burger"
@@ -10,9 +19,9 @@
                     aria-expanded="false"
                     data-target="navbarBasicExample"
                 >
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true" />
+                    <span aria-hidden="true" />
+                    <span aria-hidden="true" />
                 </a>
             </div>
 
@@ -25,14 +34,17 @@
                                     class="img-thumbnail profile-image"
                                     alt=""
                                     :src="user.photoURL"
-                                />
+                                >
 
-                                <router-link class="button is-primary" to="/cart">
+                                <router-link
+                                    class="button is-primary"
+                                    to="/cart"
+                                >
                                     <img
-                                        src='https://pngimg.com/uploads/shopping_cart/shopping_cart_PNG38.png'
-                                        width='50'
+                                        src="https://pngimg.com/uploads/shopping_cart/shopping_cart_PNG38.png"
+                                        width="50"
                                         alt=""
-                                    />
+                                    >
 
                                     <span class="badge badge-danger badge-pill">
                                         {{ cart.length }}
@@ -40,7 +52,11 @@
                                 </router-link>
                             </div>
 
-                            <router-link v-else class="button is-primary" to="/login">
+                            <router-link
+                                v-else
+                                class="button is-primary"
+                                to="/login"
+                            >
                                 Login
                             </router-link>
                         </div>
@@ -56,13 +72,13 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters } from "vuex";
 
 export default {
-    name: 'Base-component',
+    name: "BaseComponent",
     computed: {
-        ...mapGetters('account', ['user']),
-        ...mapGetters('product', ['cart']),
+        ...mapGetters("account", ["user"]),
+        ...mapGetters("product", ["cart"]),
     },
 };
 </script>

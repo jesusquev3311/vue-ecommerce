@@ -2,8 +2,12 @@
     <div style="padding: 25px;">
         <div class="container">
             <div class="columns">
-                <div class="column is-one-quarter" v-for="product in products" :key="product.id">
-                <ProductCard :product="product" />
+                <div
+                    v-for="product in products"
+                    :key="product.id"
+                    class="column is-one-quarter"
+                >
+                    <ProductCard :product="product" />
                 </div>
             </div>
         </div>
@@ -11,19 +15,20 @@
 </template>
 
 <script>
-import { mapActions, mapGetters } from 'vuex';
-import ProductCard from './ProductCard.vue';
+import { mapActions, mapGetters } from "vuex";
+import ProductCard from "./ProductCard.vue";
 
 export default {
+    name: "ProductsComponent",
     components: { ProductCard },
+    computed: {
+        ...mapGetters("product", ["products"]),
+    },
     mounted() {
         this.getProducts();
     },
-    computed: {
-        ...mapGetters('product', ['products']),
-    },
     methods: {
-        ...mapActions('product', ['getProducts', 'addCart', 'removeCart']),
+        ...mapActions("product", ["getProducts", "addCart", "removeCart"]),
     },
 };
 </script>
