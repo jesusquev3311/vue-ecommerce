@@ -1,18 +1,23 @@
 <template>
-    <div class="card mb-4 shadow-sm">
-        <img
-            :src="product.imageUrl"
-            class="card-img-top product-image"
-            alt=""
-        >
-        <div class="card-body">
-            <h5 class="card-title text-left">
-                {{ product.name }}
-            </h5>
-            <div class="row">
+    <div class="card">
+        <div class="card-image">
+            <figure class="image">
+                <img
+                    :src="product.imageUrl"
+                    class="card-img-top product-image"
+                    alt=""
+                >
+            </figure>
+        </div>
+        <div class="card-content">
+            <div class="content">
+                <h5 class="title is-5">
+                    {{ product.name }}
+                </h5>
+                <br>
                 <router-link
                     type="button"
-                    class="btn btn-primary btn-lg"
+                    class="button is-primary is-large"
                     :to="'/details/' + product.id"
                 >
                     Details

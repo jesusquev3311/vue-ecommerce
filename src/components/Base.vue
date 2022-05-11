@@ -65,9 +65,9 @@
             </div>
         </nav>
 
-        <div class="page-container">
+        <main class="page">
             <router-view />
-        </div>
+        </main>
     </div>
 </template>
 
@@ -96,5 +96,9 @@ export default {
     }
     .btn:focus {
         background: teal;
+    }
+
+    .columns{
+        flex-wrap: wrap;
     }
 </style>
