@@ -85,4 +85,16 @@ export default {
 
 <style lang="scss">
     @import "@/assets/css/main.scss";
+
+    .profile-image {
+        width: 50px;
+        border-radius: 100%;
+    }
+
+    input {
+        border-radius: 0%;
+    }
+    .btn:focus {
+        background: teal;
+    }
 </style>

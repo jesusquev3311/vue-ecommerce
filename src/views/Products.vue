@@ -1,5 +1,5 @@
 <template>
-    <div style="padding: 25px;">
+    <div class="produtcs">
         <div class="container">
             <div class="columns">
                 <div
@@ -16,7 +16,7 @@
 
 <script>
 import { mapActions, mapGetters } from "vuex";
-import ProductCard from "./ProductCard.vue";
+import ProductCard from "@/components/ProductCard.vue";
 
 export default {
     name: "ProductsComponent",
@@ -32,3 +32,9 @@ export default {
     },
 };
 </script>
+
+<style lang="scss" scoped>
+    .products{
+        padding: 25px;
+    }
+</style>

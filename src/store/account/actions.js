@@ -19,4 +19,4 @@ const login = ({ commit }) => {
         });
 };
 
-export default login;
+export { login };

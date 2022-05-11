@@ -50,6 +50,9 @@ export default {
             quantity: 1,
         };
     },
+    computed: {
+        ...mapState("product", ["cart"]),
+    },
     watch: {
         product({ id }) {
             this.isInCardProp = this.isInCart(id);
@@ -62,9 +65,6 @@ export default {
                 this.quantity = 1;
             }
         },
-    },
-    computed: {
-        ...mapState("product", ["cart"]),
     },
     methods: {
         ...mapActions("product", ["addCart", "removeCart"]),
