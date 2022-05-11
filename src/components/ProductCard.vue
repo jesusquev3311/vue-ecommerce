@@ -14,6 +14,10 @@
                 <h5 class="title is-5">
                     {{ product.name }}
                 </h5>
+                <span class="tag is-link">
+                    ${{ product.price }}
+                </span>
+                <br>
                 <br>
                 <router-link
                     type="button"
